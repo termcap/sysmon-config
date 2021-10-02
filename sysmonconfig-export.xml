@@ -326,6 +326,7 @@
 			<Image condition="image">psinfo.exe</Image>
 			<!--Ports: Suspicious-->
 			<DestinationPort name="SSH" condition="is">22</DestinationPort> <!--SSH protocol, monitor admin connections-->
+			<DestinationPort name="DNS" condition="is">53</DestinationPort> <!--DNS queries, this even will log the DNS server IP unlike DNS Qeury Event 22-->
 			<DestinationPort name="Telnet" condition="is">23</DestinationPort> <!--Telnet protocol, monitor admin connections, insecure-->
 			<DestinationPort name="SMTP" condition="is">25</DestinationPort> <!--SMTP mail protocol port, insecure, used by threats-->
 			<DestinationPort name="IMAP" condition="is">143</DestinationPort> <!--IMAP mail protocol port, insecure, used by threats-->
